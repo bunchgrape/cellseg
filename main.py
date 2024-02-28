@@ -53,7 +53,7 @@ def draw_contours_(canvas, contours, close=True):
 
 def analyze(fig_path):
     print("Processing %s ... " % fig_path)
-    fig_name = fig_path.split('/')[-1]
+    fig_name = os.path.basename(fig_path)
     
     ## download and load pretrained model
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
